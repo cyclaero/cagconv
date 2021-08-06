@@ -51,4 +51,6 @@ Likewise the date column of daily time series of the Solar Active Regions comes 
    
    `./sarconv 1daily_area.txt 1880-2021.tsv`  
    
-4. Open the TSV file with you favorite graphing and/or data analysis application, for example with [CVA](https://cyclaero.com/en/downloads/articles/1571499655.html).
+4. Open the TSV file with you favorite graphing and/or data analysis application, for example with [CVA](https://cyclaero.com/en/downloads/articles/1571499655.html).  
+   
+<img width="640" alt="CAG+SAR-1880-2021" src="https://user-images.githubusercontent.com/13712142/128437062-6cab1669-dad3-42b8-8b5c-73707db0a930.png">
