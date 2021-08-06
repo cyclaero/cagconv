@@ -50,9 +50,6 @@
 #include <stdbool.h>
 #include <stdint.h>
 #include <math.h>
-#include <string.h>
-#include <time.h>
-#include <sys/stat.h>
 
 //                           -    1    2     3     4      5      6      7      8      9     10     11     12
 double commYearSteps[13] = {0.0, 0.0, 31.0, 59.0, 90.0, 120.0, 151.0, 181.0, 212.0, 243.0, 273.0, 304.0, 334.0};

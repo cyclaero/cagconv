@@ -50,9 +50,6 @@
 #include <stdbool.h>
 #include <stdint.h>
 #include <math.h>
-#include <string.h>
-#include <time.h>
-#include <sys/stat.h>
 
 //                           -     1     2     3      4      5      6      7      8      9     10     11     12
 double commYearMids[13] = {182.5, 15.5, 45.0, 74.5, 105.0, 135.5, 166.0, 196.5, 227.5, 258.0, 288.5, 319.0, 349.5};
