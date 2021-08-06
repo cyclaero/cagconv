@@ -42,7 +42,7 @@
 //     ./sarconv daily_area.txt sar-1880-2021.tsv
 //
 //  4. Open the TSV file with your favorite graphing and/or data analysis application,
-//     for example with CVA -- https://cyclaero.com/en/downloads/articles/1571499655.html.
+//     for example with CVA - https://cyclaero.com/en/downloads/articles/1571499655.html.
 
 
 #include <stdio.h>
@@ -123,7 +123,8 @@ int main(int argc, char *const argv[])
                         m = (int)strtol(p = q, &q, 10),
                         d = (int)strtol(p = q, &q, 10);
 
-                  if ((1931 < y || y == 1931 && (4 < m || m == 4 && d >= 15))  && y <= 2020)                               // start at 1880
+               // if ((1931 < y || y == 1931 && (4 < m || m == 4 && d >= 15))  && y <= 2020)    // only extract 32768 tuples for doing FFT
+                  if (y >= 1880)                                                                // start at 1880
                   {
                      double t = y + ((isLeapYear(y))
                                     ? (leapYearSteps[m] + d - 0.5)/366.0
