@@ -34,7 +34,7 @@ On the other hand, in the normal year 2009, this is 2009 + (31 + 28 + 15.5)/365 
 4. Open the TSV file with you favorite graphing and/or data analysis application, for example with [CVA](https://cyclaero.com/en/downloads/articles/1571499655.html).  
    
 ## The SAR file
-Likewise the date column of daily time series of the Solar Active Regions comes with calendar dates separated by spaces, and it must be converted to decimal years in similar fashion as NOAA's CAG file.  
+Likewise the date column of daily time series of the Solar Active Regions comes with calendar dates whreby years, months and days are separated by spaces, and it must be converted to decimal years in similar fashion as NOAA's CAG file.  
    
 `sarconv` does exactly that conversion on the SAR file of Solar Cycle Science.  
    
