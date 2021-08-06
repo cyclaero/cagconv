@@ -31,7 +31,7 @@ On the other hand, in the normal year 2009, this is 2009 + (31 + 28 + 15.5)/365 
    
     `./cagconv 1880-2021.csv 1880-2021.tsv`  
    
-4. Open the TSV file with you favorite graphing and/or data analysis application, for example with [CVA](https://cyclaero.com/en/downloads/articles/1571499655.html).  
+4. Open the TSV file with your favorite graphing and/or data analysis application, for example with [CVA](https://cyclaero.com/en/downloads/articles/1571499655.html).  
    
 ## The SAR file
 Likewise the date column of daily time series of the Solar Active Regions comes with calendar dates whreby years, months and days are separated by spaces, and it must be converted to decimal years in similar fashion as NOAA's CAG file.  
@@ -51,6 +51,6 @@ Likewise the date column of daily time series of the Solar Active Regions comes 
    
    `./sarconv 1daily_area.txt 1880-2021.tsv`  
    
-4. Open the TSV file with you favorite graphing and/or data analysis application, for example with [CVA](https://cyclaero.com/en/downloads/articles/1571499655.html).  
+4. Open the TSV file with your favorite graphing and/or data analysis application, for example with [CVA](https://cyclaero.com/en/downloads/articles/1571499655.html).  
    
 <img width="640" alt="CAG+SAR-1880-2021" src="https://user-images.githubusercontent.com/13712142/128437062-6cab1669-dad3-42b8-8b5c-73707db0a930.png">
