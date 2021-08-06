@@ -41,7 +41,9 @@
 //
 //     ./sarconv 1daily_area.txt 1880-2021.tsv
 //
-//  4. Open the TSV file with you favorite graphing and/or data analysis application.
+//  4. Open the TSV file with your favorite graphing and/or data analysis application,
+//     for example with CVA -- https://cyclaero.com/en/downloads/articles/1571499655.html.
+
 
 #include <stdio.h>
 #include <stdlib.h>
