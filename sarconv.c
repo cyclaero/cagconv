@@ -39,7 +39,7 @@
 //  3. Convert the YYYY MM DD date tupels to decimal calendar years and write it
 //     out together with the daily sunspot areas to the TSV foutput file:
 //
-//     ./sarconv 1daily_area.txt 1880-2021.tsv
+//     ./sarconv daily_area.txt sar-1880-2021.tsv
 //
 //  4. Open the TSV file with your favorite graphing and/or data analysis application,
 //     for example with CVA -- https://cyclaero.com/en/downloads/articles/1571499655.html.

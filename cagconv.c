@@ -39,7 +39,7 @@
 //  3. Convert the YYYYMM date literals to decimal calendar years and write it
 //     out together with the temperature anomalies to the TSV foutput file:
 //
-//     ./cagconv 1880-2021.csv 1880-2021.tsv
+//     ./cagconv 1880-2021.csv gta-1880-2021.tsv
 //
 //  4. Open the TSV file with your favorite graphing and/or data analysis application,
 //     for example with CVA -- https://cyclaero.com/en/downloads/articles/1571499655.html.

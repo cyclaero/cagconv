@@ -29,7 +29,7 @@ On the other hand, in the normal year 2009, this is 2009 + (31 + 28 + 15.5)/365 
    
 3. Convert the YYYYMM date literals to decimal calendar years and write it out together with the temperature anomalies to the TSV foutput file:
    
-    `./cagconv 1880-2021.csv 1880-2021.tsv`  
+    `./cagconv 1880-2021.csv gta-1880-2021.tsv`  
    
 4. Open the TSV file with your favorite graphing and/or data analysis application, for example with [CVA](https://cyclaero.com/en/downloads/articles/1571499655.html).  
    
@@ -49,7 +49,7 @@ Likewise the date column of daily time series of the Solar Active Regions comes 
    
 3. Convert the YYYY MM DD date tupels to decimal calendar years and write it out together with the daily sunspot areas to the TSV foutput file:  
    
-   `./sarconv 1daily_area.txt 1880-2021.tsv`  
+   `./sarconv daily_area.txt sar-1880-2021.tsv`  
    
 4. Open the TSV file with your favorite graphing and/or data analysis application, for example with [CVA](https://cyclaero.com/en/downloads/articles/1571499655.html).  
    
