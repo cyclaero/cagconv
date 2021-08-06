@@ -54,8 +54,8 @@
 #include <time.h>
 #include <sys/stat.h>
 
-//                          --    1    2     3     4      5      6      7      8      9     10     11     12
-double normYearSteps[13] = {0.0, 0.0, 31.0, 59.0, 90.0, 120.0, 151.0, 181.0, 212.0, 243.0, 273.0, 304.0, 334.0};
+//                           -    1    2     3     4      5      6      7      8      9     10     11     12
+double commYearSteps[13] = {0.0, 0.0, 31.0, 59.0, 90.0, 120.0, 151.0, 181.0, 212.0, 243.0, 273.0, 304.0, 334.0};
 double leapYearSteps[13] = {0.0, 0.0, 31.0, 60.0, 91.0, 121.0, 152.0, 182.0, 213.0, 244.0, 274.0, 305.0, 335.0};
 
 static inline bool isLeapYear(int year)
@@ -128,7 +128,7 @@ int main(int argc, char *const argv[])
                   {
                      double t = y + ((isLeapYear(y))
                                     ? (leapYearSteps[m] + d - 0.5)/366.0
-                                    : (normYearSteps[m] + d - 0.5)/365.0);
+                                    : (commYearSteps[m] + d - 0.5)/365.0);
 
                      double at = strtod(p = q, &q);
                      double an = strtod(p = q, &q);

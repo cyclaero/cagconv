@@ -54,7 +54,8 @@
 #include <time.h>
 #include <sys/stat.h>
 
-double normYearMids[13] = {182.5, 15.5, 45.0, 74.5, 105.0, 135.5, 166.0, 196.5, 227.5, 258.0, 288.5, 319.0, 349.5};
+//                           -     1     2     3      4      5      6      7      8      9     10     11     12
+double commYearMids[13] = {182.5, 15.5, 45.0, 74.5, 105.0, 135.5, 166.0, 196.5, 227.5, 258.0, 288.5, 319.0, 349.5};
 double leapYearMids[13] = {183.0, 15.5, 45.5, 75.5, 106.0, 136.5, 167.0, 197.5, 228.5, 259.0, 289.5, 320.0, 350.5};
 
 static inline bool isLeapYear(int year)
@@ -129,7 +130,7 @@ int main(int argc, char *const argv[])
                             m = (int)lround((ym - y)*100.0);
                      double t = y + ((isLeapYear(y))
                                     ? leapYearMids[m]/366.0
-                                    : normYearMids[m]/365.0);
+                                    : commYearMids[m]/365.0);
 
                      while (*p && *p++ != ',');
                      double an = strtod(q = p, &p);
