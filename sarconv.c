@@ -36,7 +36,7 @@
 //
 //     curl -O http://solarcyclescience.com/AR_Database/daily_area.txt
 //
-//  3. Convert the YYYY MM DD date tupels to decimal calendar years and write it
+//  3. Convert the YYYY MM DD date tupels to decimal years and write it
 //     out together with the daily sunspot areas to the TSV foutput file:
 //
 //     ./sarconv daily_area.txt sar-1880-2021.tsv
@@ -116,7 +116,7 @@ int main(int argc, char *const argv[])
                if ('0' <= *line && *line <= '9' || *line == '-')
                {
                   // Read the TXT data.
-                  // Convert the YYYY MM DD date format to decimal calendar years and write it
+                  // Convert the YYYY MM DD date format to decimal years and write it
                   // out together with the daily sunspot areas to the TSV foutput file.
                   char *q, *p = (char *)line;
                   int   y = (int)strtol(p,     &q, 10),

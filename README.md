@@ -27,7 +27,7 @@ On the other hand, in the normal year 2009, this is 2009 + (31 + 28 + 15.5)/365 
    
    `curl -O https://www.ncdc.noaa.gov/cag/global/time-series/globe/land_ocean/all/12/1880-2021.csv`  
    
-3. Convert the YYYYMM date literals to decimal calendar years and write it out together with the temperature anomalies to the TSV foutput file:
+3. Convert the YYYYMM date literals to decimal years and write it out together with the temperature anomalies to the TSV foutput file:
    
     `./cagconv 1880-2021.csv gta-1880-2021.tsv`  
    
@@ -47,7 +47,7 @@ Likewise the date column of daily time series of the Solar Active Regions comes 
    
    `curl -O http://solarcyclescience.com/AR_Database/daily_area.txt`  
    
-3. Convert the YYYY MM DD date tupels to decimal calendar years and write it out together with the daily sunspot areas to the TSV foutput file:  
+3. Convert the YYYY MM DD date tupels to decimal years and write it out together with the daily sunspot areas to the TSV foutput file:  
    
    `./sarconv daily_area.txt sar-1880-2021.tsv`  
    

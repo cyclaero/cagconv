@@ -36,7 +36,7 @@
 //
 //     curl -O https://www.ncdc.noaa.gov/cag/global/time-series/globe/land_ocean/all/12/1880-2021.csv
 //
-//  3. Convert the YYYYMM date literals to decimal calendar years and write it
+//  3. Convert the YYYYMM date literals to decimal years and write it
 //     out together with the temperature anomalies to the TSV foutput file:
 //
 //     ./cagconv 1880-2021.csv gta-1880-2021.tsv
@@ -118,7 +118,7 @@ int main(int argc, char *const argv[])
                if ('0' <= *line && *line <= '9' || *line == '-')
                {
                   // Read the CSV data.
-                  // Convert the YYYYMM date literals to decimal calendar years and write it
+                  // Convert the YYYYMM date literals to decimal years and write it
                   // out together with the temperature anomalies to the TSV foutput file.
                   char  *p, *q;
                   double ym = strtod((char *)line, &p);
