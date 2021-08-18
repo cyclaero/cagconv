@@ -30,7 +30,7 @@ On the other hand, in the normal year 2009, this is 2009 + (31 + 28 + 15.5)/365 
 4. Open the TSV file with your favorite graphing and/or data analysis application, for example with [CVA](https://cyclaero.com/en/downloads/CVA)  
    
 ## The SAR file
-Likewise the date column of daily time series of the Solar Active Regions comes with calendar dates whereby years, months and days are separated by spaces, and it must be converted to decimal years in similar fashion as NOAA's CAG file.  
+Likewise the date column of daily time series of the Solar Active Regions comes with calendar dates whereby years, months and days are separated by spaces, and it must be converted to decimal years in similar fashion as NOAA's CAG file.  
    
 `sarconv` does exactly that conversion on the SAR file of Solar Cycle Science.  
 
@@ -53,7 +53,7 @@ Likewise the date column of daily time series of the Solar Active Regions comes 
    
 
 ## Fourier analysis of the SAR time series
-Solar Active Regions are recorded in terms of the area of the [Sun](https://en.wikipedia.org/wiki/Sun) which is seized by [Sunspots](https://en.wikipedia.org/wiki/Sunspot). Sunspots are caused by magnetic field flux and its number and extend vary by the [11-year solar cycle](https://en.wikipedia.org/wiki/Solar_cycle). In general, cycles cry for [Fourier analysis](https://en.wikipedia.org/wiki/Fourier_analysis). Now, why not, let’s do it. 
+Solar Active Regions are recorded in terms of the area of the [Sun](https://en.wikipedia.org/wiki/Sun) which is seized by [Sunspots](https://en.wikipedia.org/wiki/Sunspot). Sunspots are caused by magnetic field flux and its number and extend vary by the [11-year solar cycle](https://en.wikipedia.org/wiki/Solar_cycle). In general, cycles cry for [Fourier analysis](https://en.wikipedia.org/wiki/Fourier_analysis). Now, why not, let’s do it.  
    
 `cyclasar` serves for this purpose when applied to the output of `sarconv`.
    
