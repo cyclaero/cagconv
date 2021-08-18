@@ -1,11 +1,9 @@
-# cagconv & sarconv
+# cagconv, sarconv and cyclasar
 
-The time series of Global Temperature Anomalies which can be downloaded from the [NOAA site Climate at a Glance (CAG)](https://www.ncdc.noaa.gov/cag/global/time-series) and the time series
-of the Solar Active Regions which can be downloaded from [Solar Cycle Science](http://solarcyclescience.com/index.html) come with date formats which are unsuitable for mathematical series analysis.  
+The time series of Global Temperature Anomalies which can be downloaded from the [NOAA site Climate at a Glance (CAG)](https://www.ncdc.noaa.gov/cag/global/time-series) and the time series of the Solar Active Regions which can be downloaded from [Solar Cycle Science](http://solarcyclescience.com/index.html) come with date formats which are unsuitable for mathematical series analysis.  
    
 ## The CAG file
-In the NOAA file, the Year column looks like it contains normal numerical values, but the years and months are simply joined together character by character, and so 201812 means December 2018, and 201901 stands for the following month, January 2019. The problem here is that the numerical difference 201901-201812 is not 1 but 89. So the series with the character-wise formatted time values
-is not continuous, but jumps at each year change by 88+1. In order to get a time scale with continuous decimal years, the Year column needs to be converted.  
+In the NOAA file, the Year column looks like it contains normal numerical values, but the years and months are simply joined together character by character, and so 201812 means December 2018, and 201901 stands for the following month, January 2019. The problem here is that the numerical difference 201901-201812 is not 1 but 89. So the series with the character-wise formatted time values is not continuous, but jumps at each year change by 88+1. In order to get a time scale with continuous decimal years, the Year column needs to be converted.  
    
 ### The decimal year
 The NOAA table lists calendar years/months. This means that the conversion must take into account the different length of February in normal and leap years.
@@ -32,8 +30,7 @@ On the other hand, in the normal year 2009, this is 2009 + (31 + 28 + 15.5)/365 
 4. Open the TSV file with your favorite graphing and/or data analysis application, for example with [CVA](https://cyclaero.com/en/downloads/CVA)  
    
 ## The SAR file
-Likewise the date column of daily time series of the Solar Active Regions comes with calendar dates whereby years, months and days are separated by spaces, and it must
-be converted to decimal years in similar fashion as NOAA's CAG file.  
+Likewise the date column of daily time series of the Solar Active Regions comes with calendar dates whereby years, months and days are separated by spaces, and it must be converted to decimal years in similar fashion as NOAA's CAG file.  
    
 `sarconv` does exactly that conversion on the SAR file of Solar Cycle Science.  
 
@@ -56,8 +53,7 @@ be converted to decimal years in similar fashion as NOAA's CAG file.  
    
 
 ## Fourier analysis of the SAR time series
-Solar Active Regions are recorded in terms of the area of the [Sun](https://en.wikipedia.org/wiki/Sun) which is seized by [Sunspots](https://en.wikipedia.org/wiki/Sunspot). Sunspots are caused by
-magnetic field flux and its number varies by the [11-year solar cycle](https://en.wikipedia.org/wiki/Solar_cycle). In general, cycles cry for [Fourier analysis](https://en.wikipedia.org/wiki/Fourier_analysis).  
+Solar Active Regions are recorded in terms of the area of the [Sun](https://en.wikipedia.org/wiki/Sun) which is seized by [Sunspots](https://en.wikipedia.org/wiki/Sunspot). Sunspots are caused by magnetic field flux and its number and extend vary by the [11-year solar cycle](https://en.wikipedia.org/wiki/Solar_cycle). In general, cycles cry for [Fourier analysis](https://en.wikipedia.org/wiki/Fourier_analysis). Now, why not, let’s do it. 
    
 `cyclasar` serves for this purpose when applied to the output of `sarconv`.
    
