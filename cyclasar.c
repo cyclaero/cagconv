@@ -64,7 +64,7 @@
 //     ./cyclasar filter 0 0.001 10 sar-1880-2021.tsv filtered-sar-1880-2021.tsv
 //
 //  6. Open the resulting TSV files with your favorite graphing and/or data analysis application,
-//     for example with CVA - https://cyclaero.com/en/downloads/articles/1571499655.html
+//     for example with CVA - https://cyclaero.com/en/downloads/CVA
 
 
 
