@@ -1,6 +1,7 @@
 .DS_Store
 cagconv
 sarconv
+cyclasar
 xcshareddata
 xcuserdata
 *.xcworkspace

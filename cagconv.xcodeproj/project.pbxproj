@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		7E53ED8321B1A83000B22251 /* cagconv.c in Sources */ = {isa = PBXBuildFile; fileRef = 7E53ED8221B1A83000B22251 /* cagconv.c */; };
 		7E9EA69126BB331C0077FA4F /* sarconv.c in Sources */ = {isa = PBXBuildFile; fileRef = 7E9EA68426BB2FA40077FA4F /* sarconv.c */; };
+		7EA532EF26CC587B00866A4B /* cyclasar.c in Sources */ = {isa = PBXBuildFile; fileRef = 7E46519126CB3D6100BC2198 /* cyclasar.c */; };
+		7EA532F226CC58B900866A4B /* libffts.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EA532F126CC58B900866A4B /* libffts.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,12 +32,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		7EA532EA26CC581F00866A4B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		7E415E8726BC992900708C39 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		7E415E8826BC992900708C39 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7E415E8926BC994400708C39 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		7E46519126CB3D6100BC2198 /* cyclasar.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = cyclasar.c; sourceTree = "<group>"; };
 		7E53ED7F21B1A83000B22251 /* cagconv */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = cagconv; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E53ED8221B1A83000B22251 /* cagconv.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = cagconv.c; sourceTree = "<group>"; };
 		7E9EA68426BB2FA40077FA4F /* sarconv.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sarconv.c; sourceTree = "<group>"; };
@@ -44,6 +56,10 @@
 		7E9EA68F26BB31120077FA4F /* gta-1880-2021.tsv */ = {isa = PBXFileReference; lastKnownFileType = text; path = "gta-1880-2021.tsv"; sourceTree = "<group>"; };
 		7E9EA69026BB31120077FA4F /* daily_area.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = daily_area.txt; sourceTree = "<group>"; };
 		7E9EA69226BB46FE0077FA4F /* sar-1880-2021.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "sar-1880-2021.tsv"; sourceTree = "<group>"; };
+		7EA532EE26CC581F00866A4B /* cyclasar */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = cyclasar; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EA532F126CC58B900866A4B /* libffts.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libffts.dylib; path = ../../../../../../../usr/local/lib/libffts.dylib; sourceTree = "<group>"; };
+		7EEB2BE726CD7A28003A69E0 /* filtered-sar-1880-2021.tsv */ = {isa = PBXFileReference; lastKnownFileType = text; path = "filtered-sar-1880-2021.tsv"; sourceTree = "<group>"; };
+		7EEB2BE826CD7A28003A69E0 /* spectral-sar-1880-2021.tsv */ = {isa = PBXFileReference; lastKnownFileType = text; path = "spectral-sar-1880-2021.tsv"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +77,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7EA532E926CC581F00866A4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EA532F226CC58B900866A4B /* libffts.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -69,14 +93,18 @@
 			children = (
 				7E53ED8221B1A83000B22251 /* cagconv.c */,
 				7E9EA68426BB2FA40077FA4F /* sarconv.c */,
+				7E46519126CB3D6100BC2198 /* cyclasar.c */,
 				7E9EA68E26BB31120077FA4F /* 1880-2021.csv */,
 				7E9EA68F26BB31120077FA4F /* gta-1880-2021.tsv */,
 				7E9EA69026BB31120077FA4F /* daily_area.txt */,
 				7E9EA69226BB46FE0077FA4F /* sar-1880-2021.tsv */,
+				7EEB2BE826CD7A28003A69E0 /* spectral-sar-1880-2021.tsv */,
+				7EEB2BE726CD7A28003A69E0 /* filtered-sar-1880-2021.tsv */,
 				7E415E8826BC992900708C39 /* README.md */,
 				7E415E8726BC992900708C39 /* LICENSE */,
 				7E415E8926BC994400708C39 /* .gitignore */,
 				7E53ED8021B1A83000B22251 /* Products */,
+				7EA532F026CC58B900866A4B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,8 +113,17 @@
 			children = (
 				7E53ED7F21B1A83000B22251 /* cagconv */,
 				7E9EA68D26BB2FAE0077FA4F /* sarconv */,
+				7EA532EE26CC581F00866A4B /* cyclasar */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		7EA532F026CC58B900866A4B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7EA532F126CC58B900866A4B /* libffts.dylib */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +163,23 @@
 			productReference = 7E9EA68D26BB2FAE0077FA4F /* sarconv */;
 			productType = "com.apple.product-type.tool";
 		};
+		7EA532E626CC581F00866A4B /* cyclasar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7EA532EB26CC581F00866A4B /* Build configuration list for PBXNativeTarget "cyclasar" */;
+			buildPhases = (
+				7EA532E726CC581F00866A4B /* Sources */,
+				7EA532E926CC581F00866A4B /* Frameworks */,
+				7EA532EA26CC581F00866A4B /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = cyclasar;
+			productName = hello;
+			productReference = 7EA532EE26CC581F00866A4B /* cyclasar */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -155,6 +209,7 @@
 			targets = (
 				7E53ED7E21B1A83000B22251 /* cagconv */,
 				7E9EA68526BB2FAE0077FA4F /* sarconv */,
+				7EA532E626CC581F00866A4B /* cyclasar */,
 			);
 		};
 /* End PBXProject section */
@@ -173,6 +228,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E9EA69126BB331C0077FA4F /* sarconv.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EA532E726CC581F00866A4B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EA532EF26CC587B00866A4B /* cyclasar.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,7 +283,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include/ffts;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 			};
 			name = Debug;
 		};
@@ -261,7 +325,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MTL_ENABLE_DEBUG_INFO = NO;
+				HEADER_SEARCH_PATHS = /usr/local/include/ffts;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 			};
 			name = Release;
 		};
@@ -287,6 +352,20 @@
 			name = Debug;
 		};
 		7E9EA68C26BB2FAE0077FA4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		7EA532EC26CC581F00866A4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7EA532ED26CC581F00866A4B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -319,6 +398,15 @@
 			buildConfigurations = (
 				7E9EA68B26BB2FAE0077FA4F /* Debug */,
 				7E9EA68C26BB2FAE0077FA4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7EA532EB26CC581F00866A4B /* Build configuration list for PBXNativeTarget "cyclasar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EA532EC26CC581F00866A4B /* Debug */,
+				7EA532ED26CC581F00866A4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

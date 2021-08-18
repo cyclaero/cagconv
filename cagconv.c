@@ -29,7 +29,7 @@
 //
 //  1. Compile this file on either of FreeBSD, Linux or macOS:
 //
-//     cc -g0 -O3 -march=native cagconv.c -Wno-parentheses -lm -o cagconv
+//     cc -g0 -O3 cagconv.c -Wno-parentheses -lm -o cagconv
 //
 //  2. Download the monthly time series of the global surface temperature anomalies
 //     from NOAA's site Climate at a Glance - https://www.ncdc.noaa.gov/cag/global/time-series
@@ -42,7 +42,7 @@
 //     ./cagconv 1880-2021.csv gta-1880-2021.tsv
 //
 //  4. Open the TSV file with your favorite graphing and/or data analysis application,
-//     for example with CVA - https://cyclaero.com/en/downloads/articles/1571499655.html.
+//     for example with CVA - https://cyclaero.com/en/downloads/articles/1571499655.html
 
 
 #include <stdio.h>
@@ -96,6 +96,9 @@ int main(int argc, char *const argv[])
          unsigned
          char *line;
          char  data[256];
+
+         fprintf(tsv, "# Time base:   30.44\n"
+                      "# Time unit:   d\n");
 
          // Copy over blank and descriptive text lines to the output file.
          while ((line = (unsigned char *)fgets(data, 256, csv))
