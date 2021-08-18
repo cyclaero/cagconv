@@ -65,7 +65,7 @@ Solar Active Regions are recorded in terms of the area of the [Sun](https://en.w
    
    `cc -g0 -O3 cyclasar.c -Wno-parentheses -I/usr/local/include/ffts -L/usr/local/lib -lffts -lm -o cyclasar`  
    
-2. Download the daily time series of the sun's acitve regions from [Solar Cycle Science](http://solarcyclescience.com/index.html):  
+2. Download the daily time series of solar acitve regions from [Solar Cycle Science](http://solarcyclescience.com/index.html):  
    
    `curl -O http://solarcyclescience.com/AR_Database/daily_area.txt`  
    
