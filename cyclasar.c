@@ -28,7 +28,7 @@
 //
 //  Prerequisite: FFTS - The Fastest Fourier Transform in the South
 //
-//  1. clone the ffts sources from the GitHub repository https://github.com/anthonix/ffts:
+//  Clone the ffts sources from the GitHub repository https://github.com/anthonix/ffts:
 //
 //     cd ~/install
 //     git clone https://github.com/anthonix/ffts.git ffts
