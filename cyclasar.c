@@ -248,11 +248,16 @@ int main(int argc, const char *argv[])
 
             else if (method == filter)
             {
+               // add the filter command line to the header of the output file
+               fprintf(outfile, "#");
+               for (i = 0; i < argc; i++)
+                  fprintf(outfile, " %s", argv[i]);
+               fprintf(outfile, "\n");
+
                bool invert;
                if (invert = lowCut > highCut)
                   d = lowCut, lowCut = highCut, highCut = d;
                kT *= (highCut - lowCut)/100;
-
 
                int n2p1 = ((n & 0x1) ? (n + 1) >> 1 : n >> 1) + 1;
 
