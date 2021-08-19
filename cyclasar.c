@@ -35,7 +35,7 @@
 //     cd ffts
 //     sed -e 's/CMAKE_COMPILER_IS_GNUCC/CMAKE_C_COMPILER_ID MATCHES "GNU|Clang"/g' -i ".orig" CMakeLists.txt
 //     mkdir build; cd build
-//     cmake -DDISABLE_DYNAMIC_CODE=ON -DENABLE_SHARED=ON ..
+//     cmake -DDISABLE_DYNAMIC_CODE=on -DENABLE_SHARED=on ..
 //     make
 //     sudo make install clean
 //
