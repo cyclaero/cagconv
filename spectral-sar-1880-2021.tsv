@@ -1,4 +1,8 @@
-freq/1/d	At/µhsp
+# YYYY MM DD  Total  North  South
+# Time base:   1
+# Time unit:   d
+# Point count: 51656
+freq/1/d	|At|/µhsp
 0.000000000	1319.162475586
 0.000019359	348.464019775
 0.000038718	36.261466980

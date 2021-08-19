@@ -165,14 +165,44 @@ int main(int argc, const char *argv[])
       {
          int i, n = 65536;
 
+         double timebase = 1;
+         char  *timeunit = "d";
          char  *line, buf[256];
          while (*(line = fgets(buf, 256, infile)) == '#')
+         {
+            fprintf(outfile, "%s", line);
+
+            if (strstr(line, "# Time base:   "))
+               timebase = strtod(line+15, NULL);
+
+            if (strstr(line, "# Time unit:   "))
+            {
+               for (line += 15, i = 0; (unsigned char)line[i] >= ' '; i++);
+               line[i] = '\0';
+               timeunit = strcpy(alloca(i+1), line);
+            }
+
             if (strstr(line, "# Point count: "))
                n = (int)strtol(line+15, NULL, 10);
+         }
 
          if (n > 2)
          {
             // the line with the column titles has just been read in, and will be implicitely skiped below
+            char *timescale;
+            
+            // skip whitespace and non-printing chars
+            while ((unsigned char)*line && (unsigned char)*line <= ' ')
+               line++;
+            if ('0' <= *line && *line <= '9')
+               timescale = "t/a";
+            else
+            {
+               for (i = 0; (unsigned char)line[i] > ' '; i++);
+               line[i] = '\0';
+               timescale = strcpy(alloca(i+1), line);
+            }
+
             float *time = malloc(n*sizeof(float));
 
             float *input, *output;
@@ -210,7 +240,7 @@ int main(int argc, const char *argv[])
 
             if (method == spectrum)
             {
-               fprintf(outfile, "freq/1/d\t|At|/µhsp\n");
+               fprintf(outfile, "freq/%.4g/%s\t|At|/µhsp\n", timebase, timeunit);
                int n2 = n >> 1;
                for (i = 0; i <= n2; i++)
                   fprintf(outfile, "%.9f\t%.9f\n", (double)i/n, sqrtf(sqrf(output[2*i]) + sqrf(output[2*i+1]))/n2);
@@ -246,7 +276,7 @@ int main(int argc, const char *argv[])
                ffts_execute(p, output, input);
                ffts_free(p);
 
-               fprintf(outfile, "t/a\tAt/µhsp\n");
+               fprintf(outfile, "%s\tAt/µhsp\n", timescale);
                if (trend)
                   for (i = 0; i < n; i++)
                      fprintf(outfile, "%.9f\t%.9f\n", time[i], input[2*i]/n + a + b*i);
