@@ -210,7 +210,7 @@ int main(int argc, const char *argv[])
 
             if (method == spectrum)
             {
-               fprintf(outfile, "freq/1/d\tAt/µhsp\n");
+               fprintf(outfile, "freq/1/d\t|At|/µhsp\n");
                int n2 = n >> 1;
                for (i = 0; i <= n2; i++)
                   fprintf(outfile, "%.9f\t%.9f\n", (double)i/n, sqrtf(sqrf(output[2*i]) + sqrf(output[2*i+1]))/n2);
