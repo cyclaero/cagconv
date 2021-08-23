@@ -111,9 +111,9 @@ int main(int argc, char *const argv[])
             // - the formular symbol of time is 't'
             //   the unit symbol of year is 'a'
             // - formular symbol of celsius temperatures is '𝜗' (lower case theta)
-            //   in general, differences are designated by '∆' (capital letter delta)
+            //   in general, differences are designated by 'Δ' (greek capital letter delta)
             //   the unit symbol of (Celsius) centigrade is '°C'
-            fprintf(tsv, "t/a\t∆𝜗/°C\n");
+            fprintf(tsv, "t/a\tΔ𝜗/°C\n");
 
             do
                if ('0' <= *line && *line <= '9' || *line == '-')
