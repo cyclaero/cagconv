@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E2FC5DE2810E37F0027DC40 /* eopconv.c in Sources */ = {isa = PBXBuildFile; fileRef = 7E2FC5D32810C7F90027DC40 /* eopconv.c */; };
 		7E53ED8321B1A83000B22251 /* cagconv.c in Sources */ = {isa = PBXBuildFile; fileRef = 7E53ED8221B1A83000B22251 /* cagconv.c */; };
 		7E9EA69126BB331C0077FA4F /* sarconv.c in Sources */ = {isa = PBXBuildFile; fileRef = 7E9EA68426BB2FA40077FA4F /* sarconv.c */; };
 		7EA532EF26CC587B00866A4B /* cyclasar.c in Sources */ = {isa = PBXBuildFile; fileRef = 7E46519126CB3D6100BC2198 /* cyclasar.c */; };
@@ -14,6 +15,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		7E2FC5D82810DAEF0027DC40 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		7E53ED7D21B1A83000B22251 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -44,6 +54,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7E2FC5D32810C7F90027DC40 /* eopconv.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = eopconv.c; sourceTree = "<group>"; };
+		7E2FC5DC2810DAEF0027DC40 /* eopconv */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = eopconv; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E2FC5DD2810DBA40027DC40 /* eopc01.iau2000.1846-now */ = {isa = PBXFileReference; explicitFileType = text; path = "eopc01.iau2000.1846-now"; sourceTree = "<group>"; };
 		7E415E8726BC992900708C39 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		7E415E8826BC992900708C39 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7E415E8926BC994400708C39 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -63,6 +76,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7E2FC5D72810DAEF0027DC40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7E53ED7C21B1A83000B22251 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -94,12 +114,14 @@
 				7E53ED8221B1A83000B22251 /* cagconv.c */,
 				7E9EA68426BB2FA40077FA4F /* sarconv.c */,
 				7E46519126CB3D6100BC2198 /* cyclasar.c */,
+				7E2FC5D32810C7F90027DC40 /* eopconv.c */,
 				7E9EA68E26BB31120077FA4F /* 1880-2021.csv */,
 				7E9EA68F26BB31120077FA4F /* gta-1880-2021.tsv */,
 				7E9EA69026BB31120077FA4F /* daily_area.txt */,
 				7E9EA69226BB46FE0077FA4F /* sar-1880-2021.tsv */,
 				7EEB2BE826CD7A28003A69E0 /* spectral-sar-1880-2021.tsv */,
 				7EEB2BE726CD7A28003A69E0 /* filtered-sar-1880-2021.tsv */,
+				7E2FC5DD2810DBA40027DC40 /* eopc01.iau2000.1846-now */,
 				7E415E8826BC992900708C39 /* README.md */,
 				7E415E8726BC992900708C39 /* LICENSE */,
 				7E415E8926BC994400708C39 /* .gitignore */,
@@ -114,6 +136,7 @@
 				7E53ED7F21B1A83000B22251 /* cagconv */,
 				7E9EA68D26BB2FAE0077FA4F /* sarconv */,
 				7EA532EE26CC581F00866A4B /* cyclasar */,
+				7E2FC5DC2810DAEF0027DC40 /* eopconv */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -129,6 +152,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7E2FC5D42810DAEF0027DC40 /* eopconv */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E2FC5D92810DAEF0027DC40 /* Build configuration list for PBXNativeTarget "eopconv" */;
+			buildPhases = (
+				7E2FC5D52810DAEF0027DC40 /* Sources */,
+				7E2FC5D72810DAEF0027DC40 /* Frameworks */,
+				7E2FC5D82810DAEF0027DC40 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = eopconv;
+			productName = hello;
+			productReference = 7E2FC5DC2810DAEF0027DC40 /* eopconv */;
+			productType = "com.apple.product-type.tool";
+		};
 		7E53ED7E21B1A83000B22251 /* cagconv */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7E53ED8621B1A83000B22251 /* Build configuration list for PBXNativeTarget "cagconv" */;
@@ -200,6 +240,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 7E53ED7621B1A83000B22251;
@@ -210,11 +251,20 @@
 				7E53ED7E21B1A83000B22251 /* cagconv */,
 				7E9EA68526BB2FAE0077FA4F /* sarconv */,
 				7EA532E626CC581F00866A4B /* cyclasar */,
+				7E2FC5D42810DAEF0027DC40 /* eopconv */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7E2FC5D52810DAEF0027DC40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E2FC5DE2810E37F0027DC40 /* eopconv.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7E53ED7B21B1A83000B22251 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -242,6 +292,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		7E2FC5DA2810DAEF0027DC40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7E2FC5DB2810DAEF0027DC40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		7E53ED8421B1A83000B22251 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -285,6 +349,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = /usr/local/include/ffts;
 				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 			};
 			name = Debug;
 		};
@@ -327,6 +392,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = /usr/local/include/ffts;
 				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 			};
 			name = Release;
 		};
@@ -375,6 +441,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7E2FC5D92810DAEF0027DC40 /* Build configuration list for PBXNativeTarget "eopconv" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E2FC5DA2810DAEF0027DC40 /* Debug */,
+				7E2FC5DB2810DAEF0027DC40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		7E53ED7A21B1A83000B22251 /* Build configuration list for PBXProject "cagconv" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
