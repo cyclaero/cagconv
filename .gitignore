@@ -2,7 +2,6 @@
 cagconv
 sarconv
 cyclasar
-sardft.c
 eopconv
 *.tsv
 xcshareddata

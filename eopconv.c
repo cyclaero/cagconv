@@ -120,7 +120,7 @@ int main(int argc, char *const argv[])
                   if (d00 == 0.0)
                      d00 = d0 = d, x0 = x, y0 = y;
 
-                  else if (d < 11367.380)
+                  else if (d < 11368.0)
                   {
                      d0 = (d + d0)/2.0;
                      x0 = (x + x0)/2.0;
