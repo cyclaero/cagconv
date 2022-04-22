@@ -38,7 +38,7 @@
 //
 //  3. Convert the days of the besselian year to decimal years and interpolate the data
 //     in the range of 1846 to 1889 from 10 to 20 intervals per year and write it out together
-//     with the earth orientation parameters to the TSV foutput file:
+//     with the earth orientation parameters to the TSV output file:
 //
 //     ./eopconv eopc01.iau2000.1846-now eop-1846-2022.tsv
 //
@@ -84,15 +84,15 @@ int main(int argc, char *const argv[])
          char *line;
          char  data[512];
 
-         fprintf(tsv, "# Time base:   18.26210994\n"
-                      "# Time unit:   d\n\n");
+         fprintf(tsv, "# Time base:   18.2621\n"
+                      "# Time unit:   d\n#\n");
 
          // Copy over the first descriptive text lines to the output file.
          bool writeHeader = true;
          while ((line = (unsigned char *)fgets(data, 512, txt)) && *line == '#')
             if (writeHeader)
             {
-               fprintf(tsv, "# %s\n", skip(line+1));
+               fprintf(tsv, "# %s\n#\n", skip(line+1));
                writeHeader = false;
             }
 
@@ -125,11 +125,11 @@ int main(int argc, char *const argv[])
                      d0 = (d + d0)/2.0;
                      x0 = (x + x0)/2.0;
                      y0 = (y + y0)/2.0;
-                     fprintf(tsv, "%.6f\t%.6f\t%.6f\n", (d0 - d00)/365.242198781 + 1846.0, x0, y0);
+                     fprintf(tsv, "%.3f\t%.6f\t%.6f\n", (d0 - d00)/365.242 + 1846.0, x0, y0);
                      d0 = d, x0 = x, y0 = y;
                   }
 
-                  fprintf(tsv, "%.6f\t%.6f\t%.6f\n", (d - d00)/365.242198781 + 1846.0, x, y);
+                  fprintf(tsv, "%.3f\t%.6f\t%.6f\n", (d - d00)/365.242 + 1846.0, x, y);
                }
             while ((line = (unsigned char *)fgets(data, 512, txt))
                 && *(line = skip(line)));
