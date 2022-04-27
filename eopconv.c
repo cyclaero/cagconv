@@ -84,8 +84,7 @@ int main(int argc, char *const argv[])
          char *line;
          char  data[512];
 
-         fprintf(tsv, "# Time base:   18.2621\n"
-                      "# Time unit:   d\n#\n");
+         fprintf(tsv, "# Timescale:   18.2621095 d/pt\n#\n");
 
          // Copy over the first descriptive text lines to the output file.
          bool writeHeader = true;
@@ -106,7 +105,9 @@ int main(int argc, char *const argv[])
             fprintf(tsv, "t/a\tx/″\ty/″\n");
 
             char  *p, *q ;
+            int    n = 0;
             double d00 = 0.0, d0 = 0.0, d, x0 = 0.0, x, y0 = 0.0, y;
+            double xsum = 0.0, ysum = 0.0;
             do
                if ('0' <= *line && *line <= '9' || *line == '-')
                {
@@ -125,14 +126,22 @@ int main(int argc, char *const argv[])
                      d0 = (d + d0)/2.0;
                      x0 = (x + x0)/2.0;
                      y0 = (y + y0)/2.0;
-                     fprintf(tsv, "%.3f\t%.6f\t%.6f\n", (d0 - d00)/365.242 + 1846.0, x0, y0);
+                     fprintf(tsv, "%.3f\t%.6f\t%.6f\n", (d0 - d00)/365.242190 + 1846.0, x0, y0);
+                     n++;
+                     xsum += x0;
+                     ysum += y0;
                      d0 = d, x0 = x, y0 = y;
                   }
 
-                  fprintf(tsv, "%.3f\t%.6f\t%.6f\n", (d - d00)/365.242 + 1846.0, x, y);
+                  fprintf(tsv, "%.3f\t%.6f\t%.6f\n", (d - d00)/365.242190 + 1846.0, x, y);
+                  n++;
+                  xsum += x;
+                  ysum += y;
                }
             while ((line = (unsigned char *)fgets(data, 512, txt))
                 && *(line = skip(line)));
+
+            printf("n = %d, xm = %.6f, ym = %.6f\n", n, xsum/n, ysum/n);
          }
 
          if (tsv != stdout)
