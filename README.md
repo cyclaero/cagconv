@@ -1,3 +1,9 @@
+### [ACTION REQUIRED] Your GitHub account, cyclaero, will soon require 2FA
+
+Here is the deal: https://obsigna.com/articles/1693258424.html
+
+---
+ 
 # cagconv, sarconv and cyclasar
 
 The time series of Global Temperature Anomalies which can be downloaded from the [NOAA site Climate at a Glance (CAG)](https://www.ncdc.noaa.gov/cag/global/time-series) and the time series of the Solar Active Regions which can be downloaded from [Solar Cycle Science](http://solarcyclescience.com/index.html) come with date formats which are unsuitable for mathematical series analysis.  
